@@ -1,7 +1,7 @@
 {
   "name": "hubot-homepage",
   "description": "Give your bot a default home page.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Stephen Yeargin <stephen.yeargin@gmail.com>",
   "license": "MIT",
   "keywords": "hubot, hubot, homepage, express",
