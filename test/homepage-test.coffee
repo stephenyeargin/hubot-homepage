@@ -9,15 +9,16 @@ helper = new Helper('../src/homepage.coffee')
 
 describe 'homepage', ->
   beforeEach ->
-    @room = helper.createRoom()
+    @room = helper.createRoom(httpd: true)
 
   afterEach ->
     @room.destroy()
 
-  it 'shows a home page', (done) ->
+  it 'shows a home page', () ->
     chai.request("http://#{process.env.HOSTNAME || 'localhost'}:#{process.env.PORT || 8080}")
       .get('/')
-      .end (err, res) ->
+      .then (res) ->
         expect(res).to.have.status(200)
         expect(res.text).to.contain('octodex.github.com')
-        done()
+      .catch (err) ->
+        throw err
