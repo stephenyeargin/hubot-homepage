@@ -1,6 +1,6 @@
 # Hubot Homepage
 
-[![npm version](https://badge.fury.io/js/hubot-homepage.svg)](http://badge.fury.io/js/hubot-homepage) [![Build Status](https://travis-ci.org/stephenyeargin/hubot-homepage.png)](https://travis-ci.org/stephenyeargin/hubot-homepage)
+[![npm version](https://badge.fury.io/js/hubot-homepage.svg)](http://badge.fury.io/js/hubot-homepage) [![Build Status](https://app.travis-ci.com/stephenyeargin/hubot-homepage.png)](https://app.travis-ci.com/stephenyeargin/hubot-homepage)
 
 ![screenshot](./screenshots/1.png)
 
