@@ -1,6 +1,6 @@
 # Hubot Homepage
 
-[![npm version](https://badge.fury.io/js/hubot-homepage.svg)](http://badge.fury.io/js/hubot-homepage) [![Build Status](https://app.travis-ci.com/stephenyeargin/hubot-homepage.png)](https://app.travis-ci.com/stephenyeargin/hubot-homepage)
+[![npm version](https://badge.fury.io/js/hubot-homepage.svg)](http://badge.fury.io/js/hubot-homepage) [![Node CI](https://github.com/stephenyeargin/hubot-homepage/actions/workflows/nodejs.yml/badge.svg)](https://github.com/stephenyeargin/hubot-homepage/actions/workflows/nodejs.yml)
 
 ![screenshot](./screenshots/1.png)
 
