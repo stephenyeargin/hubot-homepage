@@ -1,7 +1,7 @@
 {
   "name": "hubot-homepage",
   "description": "Give your bot a default home page.",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "author": "Stephen Yeargin <stephen@yearg.in>",
   "homepage": "https://github.com/stephenyeargin/hubot-homepage",
   "license": "MIT",
