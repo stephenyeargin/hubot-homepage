@@ -32,4 +32,5 @@ jobs:
         npm test
       env:
         CI: true
-  
+        HOSTNAME: localhost
+        PORT: 8080
