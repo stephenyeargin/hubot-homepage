@@ -20,7 +20,7 @@ describe('homepage', () => {
     this.room.destroy();
   });
 
-  it('shows a home page', () => chai.request(`http://${process.env.HOSTNAME || 'localhost'}:${process.env.PORT || 8080}`)
+  it('shows a home page', () => chai.request(`http://${process.env.HOSTNAME || '127.0.0.1'}:${process.env.PORT || 8080}`)
     .get('/')
     .then((res) => {
       expect(res).to.have.status(200);
