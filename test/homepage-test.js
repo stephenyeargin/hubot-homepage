@@ -1,31 +1,15 @@
-/* global describe beforeEach afterEach it */
-/* eslint-disable func-names */
-const Helper = require('hubot-test-helper');
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const { createTestBot } = require('./common/TestBot');
 
-const {
-  expect,
-} = chai;
-chai.use(chaiHttp);
-
-const helper = new Helper('../src/homepage.js');
-
-describe('homepage', () => {
-  beforeEach(function () {
-    this.room = helper.createRoom({ httpd: true });
-  });
-
-  afterEach(function () {
-    this.room.destroy();
-  });
-
-  it('shows a home page', () => chai.request(`http://${process.env.HOSTNAME || '127.0.0.1'}:${process.env.PORT || 8080}`)
-    .get('/')
-    .then((res) => {
-      expect(res).to.have.status(200);
-      expect(res.text).to.contain('octodex.github.com');
-    }).catch((err) => {
-      throw err;
-    }));
+test('shows a home page', async () => {
+  const ctx = await createTestBot();
+  try {
+    const res = await fetch(`http://127.0.0.1:${process.env.PORT || 18080}/`);
+    assert.equal(res.status, 200);
+    const text = await res.text();
+    assert.ok(text.includes('octodex.github.com'));
+  } finally {
+    ctx.shutdown();
+  }
 });
